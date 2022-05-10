@@ -1,0 +1,3 @@
+#cmakedefine HAS_HELLO_WORLD
+
+#define HELLO_WORLD "@ABOUT_CMAKE_HELLO_WORLD@"
