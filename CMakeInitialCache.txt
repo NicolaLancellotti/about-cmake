@@ -1,0 +1,1 @@
+set(AC_VAR_0 ON CACHE BOOL "documentation" FORCE)

@@ -1,0 +1,6 @@
+add_executable(bin main.cpp)
+target_include_directories(bin PRIVATE ${AC_GENERATED_HEADERS})
+target_link_libraries(bin sum)
+if (AC_HAS_POW)
+    target_compile_definitions(bin PUBLIC HAS_POW)
+endif()

@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "configurePresets": [
+    {
+      "name": "default",
+      "binaryDir": "${sourceDir}/../build/find-package-${presetName}",
+      "generator": "Ninja",
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": "${sourceDir}/../build/ac-install"
+      }
+    },
+    {
+      "name": "from-install",
+      "inherits": "default",
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": "${sourceDir}/../build/ac-install"
+      }
+    },
+    {
+      "name": "from-build",
+      "inherits": "default",
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": "${sourceDir}/../build/ac-default"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "from-install",
+      "configurePreset": "from-install"
+    },
+    {
+      "name": "from-build",
+      "configurePreset": "from-build"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+include(@PROJECT_BINARY_DIR@/AboutCMakeBuildTargets.cmake)
+set(AboutCMake_INCLUDE_DIRS @PROJECT_SOURCE_DIR@/include/sum)
